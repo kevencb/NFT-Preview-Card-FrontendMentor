@@ -1,0 +1,123 @@
+@use 'general';
+@use 'variables';
+
+body{
+    background-color: variables.$darkBlue;
+    color: variables.$softBlue;
+    font-family: variables.$fontGeneral;
+    font-size: 1.8rem;
+}
+
+.main{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 3rem);
+    justify-content: center;
+    margin: auto;
+    max-width: 320px;
+    overflow: hidden;
+    width: 90%;
+}
+
+.nft__card{
+    background-color: variables.$darkCardBlue;
+    border-radius: variables.$borderRadiusXL;
+    padding: 2.3rem;
+    width: 100%;
+    .nft__preview img{
+        border-radius: variables.$borderRadiusSM;
+        height: 100%;
+        width: 100%;
+    }
+    .nft__preview img:hover{
+        background-color: variables.$cyan;
+        background-size: cover;
+        content: url('../images/icon-view.svg');
+        cursor: pointer;
+    }
+    .nft__body{
+        margin: 2rem 0 0rem;
+        .nft__body--title{
+            color: variables.$white;
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 0rem;
+            margin-bottom: 1.4rem;
+        }
+        .nft__body--title:hover{
+            color: variables.$cyan;
+            cursor: pointer;
+        }
+        .nft__body--description{
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 2.6rem;
+        }
+        .nft__info{
+            align-items: center;
+            border-bottom: 1px solid variables.$darkLineBlue;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.4rem;
+            margin-top: 2rem;
+            padding-bottom: 1.4rem;
+            .nft__info--price{
+                align-items:flex-start;
+                color: variables.$cyan;
+                display: flex;
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+            .nft__info--price::before{
+                content: url('../images/icon-ethereum.svg');
+                margin-right: 0.6rem;
+            }
+            .nft__info--create{
+                align-items:flex-start;
+                display: flex;
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+            .nft__info--create::before{
+                content: url('../images/icon-clock.svg');
+                margin-right: 0.6rem;
+            }
+        }
+        .nft__author{
+            align-items: center;
+            display: flex;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        .nft__author--img{
+            border: 1px solid variables.$white;
+            border-radius: 50%;
+            margin-right: 1.6rem;
+            width: 3rem;
+        }
+        .nft__author--info a{
+            color: variables.$white;
+            text-decoration: none;
+        }
+        .nft__author--info a:hover{
+            color: variables.$cyan;
+        }
+    }
+}
+
+footer{
+    font-size: 1rem;
+    height: 3rem;
+    text-align: center;
+    width: 100%;
+    a{
+        color: variables.$white;
+        text-decoration: none;
+    }
+    a:hover{
+        color: variables.$cyan;
+    }
+}
+
+
