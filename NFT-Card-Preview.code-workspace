@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "NFT-Card-Preview",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "NFT-Card-Preview"
+	}
+}

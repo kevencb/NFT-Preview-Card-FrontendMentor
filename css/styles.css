@@ -33,26 +33,46 @@ body {
   padding: 2.3rem;
   width: 100%;
 }
-.nft__card .nft__preview img {
+.nft__card .nft__preview {
   border-radius: 1rem;
-  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.nft__card .nft__preview img {
+  display: block;
   width: 100%;
 }
-.nft__card .nft__preview img:hover {
-  background-color: hsl(178deg, 100%, 50%);
-  background-size: cover;
-  content: url("../images/icon-view.svg");
+.nft__card .nft__preview--overlay {
+  background-color: hsla(178deg, 100%, 50%, 0.55);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 1s ease-in;
+  width: 100%;
+}
+.nft__card .nft__preview:hover .nft__preview--overlay {
   cursor: pointer;
+  display: block;
+}
+.nft__card .nft__preview--overlay img {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 4.2rem;
 }
 .nft__card .nft__body {
   margin: 2rem 0 0rem;
 }
 .nft__card .nft__body .nft__body--title {
   color: hsl(0deg, 0%, 100%);
+  display: block;
   font-size: 2.2rem;
   font-weight: 400;
   letter-spacing: 0rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.3rem;
 }
 .nft__card .nft__body .nft__body--title:hover {
   color: hsl(178deg, 100%, 50%);
@@ -102,7 +122,7 @@ body {
 .nft__card .nft__body .nft__author--img {
   border: 1px solid hsl(0deg, 0%, 100%);
   border-radius: 50%;
-  margin-right: 1.6rem;
+  margin-right: 1.4rem;
   width: 3rem;
 }
 .nft__card .nft__body .nft__author--info a {
